@@ -6,8 +6,8 @@ def list_division(my_list_1, my_list_2, list_length):
     for index in range(list_length):
         try:
             div = my_list_1[index] / my_list_2[index]
-        except (TypeError, ValueError):
-            print("Wrong type")
+        except (ValueError, TypeError):
+            print("wrong type")
             div = 0
         except ZeroDivisionError:
             print("division by 0")
