@@ -1,15 +1,13 @@
 #!/usr/bin/python3
 def magic_calculation(a, b):
-    '''pythoncode style'''
     result = 0
-    for index in range(1, 3):
+    for i in range(1, 3):
         try:
-            if index > a:
+            if i > a:
                 raise Exception('Too far')
             else:
-                result += a ** b / index
+                result += (a ** b) / i
         except:
             result = b + a
             break
-        return (result)
-
+    return result
