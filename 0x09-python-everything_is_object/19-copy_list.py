@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+'''Copy functions'''
+
+
 def copy_list(l):
-    '''Copys the list to the new one'''
+    ''' Copy the old list to the new one'''
     return l.copy()
