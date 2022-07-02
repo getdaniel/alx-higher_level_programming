@@ -86,13 +86,15 @@ not a list, a TypeError is raised.
 
 ::
 
-    >>> print(matrix_mul("not a list", "also not a list"))
+    >>> print(matrix_mul([[2, 3], [4, 5])
     Traceback (most recent call last):
-    TypeError: m_a must be a list
+    TypeError: m_b can't be empty
 
 ::
 
-    >>> print(matrix_mul(None, None))
+    >>> print(matrix_mul())
+    Traceback (most recent call last):
+    TypeError: m_a must be a list
     Traceback (most recent call last):
     TypeError: m_a must be a list
 
