@@ -84,8 +84,19 @@ not a list, a TypeError is raised.
     Traceback (most recent call last):
     TypeError: m_b must be a list
 
-Not just any list - they *must* be lists of lists!
+::
 
+    >>> print(matrix_mul("not a list", "also not a list"))
+    Traceback (most recent call last):
+    TypeError: m_a must be a list
+
+::
+
+    >>> print(matrix_mul(None, None))
+    Traceback (most recent call last):
+    TypeError: m_a must be a list
+
+Not just any list - they *must* be lists of lists!
 ::
 
     >>> print(matrix_mul([1, 2], [[3, 4]]))
