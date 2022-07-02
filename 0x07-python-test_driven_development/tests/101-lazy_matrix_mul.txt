@@ -14,9 +14,6 @@ of ``m_a`` by ``m_b``.
 ::
 
     >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
-
-::
-
     >>> m_a = [[1, 2]]
     >>> m_b = [
     ... [3, 4],
