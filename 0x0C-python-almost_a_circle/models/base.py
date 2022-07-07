@@ -33,13 +33,13 @@ class Base():
         if list_dictionaries is None or list_dictionaries == []:
             return '[]'
         return json.dumps(list_dictionaries)
-    
+
     @classmethod
     def save_to_file(cls, list_objs):
         '''Writes the JSON string representation of list_objs to a file.
 
         Args:
-           cls (): Classes.
+           cls (obj): Classes.
            list_objs (list): A list of instances who inherits of Base.
         '''
         filename = cls.__name__ + ".json"
@@ -60,3 +60,20 @@ class Base():
             return '[]'
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        '''Returns an instance with all attributes already set.
+
+        Args:
+           cls (obj): Classes.
+           **dictionary (dict): A double pointer to a dictionary.
+        '''
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                new = cls(1, 1)
+            else:
+                new = cls(1)
+            new.update(**dictionary)
+
+            return new
