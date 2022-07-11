@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#base_test.py
+# base_test.py
 '''Defines unittests for base.py.
 
 Unittest classes:
@@ -17,6 +17,7 @@ import unittest
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
+
 
 class TestBase_instantiation(unittest.TestCase):
     '''Unittests for testing instantiation of the Base class.'''
@@ -538,6 +539,7 @@ class TestBase_load_from_file_csv(unittest.TestCase):
     def test_load_from_file_csv_more_than_one_arg(self):
         with self.assertRaises(TypeError):
             Base.load_from_file_csv([], 1)
+
 
 if __name__ == "__main__":
     unittest.main()
