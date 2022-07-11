@@ -58,10 +58,9 @@ class Base():
         Args:
            json_string (str): A string representing a list f dictionaries.
         '''
-        if json_string is None or json_string == []:
-            return '[]'
-        else:
-            return json.loads(json_string)
+        if json_string is None or json_string == '[]':
+            return []
+        return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
