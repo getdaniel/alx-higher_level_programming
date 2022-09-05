@@ -5,8 +5,7 @@ if (isNaN(size)) {
 } else {
   for (let square = 0; square < size; square++) {
     let row = '';
-    for (let column = 0; column < size; column++)
-      row += 'X';
+    for (let column = 0; column < size; column++) { row += 'X'; }
     console.log(row);
   }
 }
