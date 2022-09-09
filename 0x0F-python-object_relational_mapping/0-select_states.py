@@ -9,7 +9,7 @@ if __name__ == "__main__":
                         charset='utf8')
     cur = db.cursor()
     try:
-        cur.execute("SELECT * FROM `states`")
+        cur.execute("SELECT * FROM `states` ORDER BY id ASC")
         rstm = cur.fetchall()
     except MySQLdb.Error:
         try:
