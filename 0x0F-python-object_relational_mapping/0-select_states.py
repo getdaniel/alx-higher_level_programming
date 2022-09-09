@@ -13,7 +13,15 @@ if __name__ == "__main__":
             db=argv[3],
             charset='utf8')
     cur = db.cursor()
-    cur.execute("SELECT * FROM `states` ORDER BY `id` ASC")
-    [print(state) for state in cur.fetchall()]
+    try:
+        cur.execute("SELECT * FROM `states` ORDER BY `id` ASC")
+        rstm = cur.fetchall()
+    except MySQLdb.Error:
+        try:
+            rstm = ("MySQLdb Error")
+        except IndexError:
+            rstm = ("MySQLdb Error - IndexError")
+        for index in rstm:
+            print(index)
     cur.close()
     db.close()
