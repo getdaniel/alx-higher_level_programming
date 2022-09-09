@@ -13,7 +13,7 @@ if __name__ == "__main__":
             db=sys.argv[3],
             charset='utf8')
     cur = db.cursor()
-    cur.execute("SELECT * FROM `states`")
+    cur.execute("SELECT * FROM `states` ORDER BY `id` ASC")
     [print(state) for state in cur.fetchall()]
     cur.close()
     db.close()
