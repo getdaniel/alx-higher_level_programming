@@ -2,7 +2,7 @@
 # Lists all State objects, and corresponding City objects,
 # contained in the database hbtn_0e_101_usa
 
-import sys
+from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from relationship_state import State

@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-# Prints the State object with the name passed as argument.
-# from the database hbtn_0e_6_usa
+"""
+Prints the State object with the name passed as argument.
+from the database hbtn_0e_6_usa
+ """
 
-import sys
+from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import State
@@ -22,3 +24,4 @@ if __name__ == "__main__":
             break
     if found is False:
         print("Not found")
+    session.close()
