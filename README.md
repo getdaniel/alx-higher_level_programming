@@ -21,3 +21,4 @@
 0x10-python-network_0 <br>
 0x11-python-network_1 <br>
 0x14-javascript-web_scraping <br>
+0x15-javascript-web_jquery <br>
